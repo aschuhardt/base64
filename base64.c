@@ -193,7 +193,7 @@ int base64_decode(unsigned char *dest, int size, char *src) {
 unsigned char *base64_dec_malloc(char *src, int *size) {
   unsigned char *buffer;
 
-  *size = base64_decsize(src);
+  *size = base64_decsize(src) + 2;
 
   buffer = (unsigned char *)malloc(*size);
   if (buffer == NULL) {
